@@ -2,6 +2,7 @@
 
 import discord
 from discord.ext import commands
+from discord.utils import get
 
 
 class Map:
@@ -17,14 +18,15 @@ class Map:
 
 BASE_URL = 'https://raw.githubusercontent.com/tateb/csgo-queue-bot/master/assets/maps/images/'
 
-bind = Map('Cache', 'de_cache', '<:de_cache:632416021910650919>',
-               f'{BASE_URL}cache.jpg')
-haven = Map('Cobblestone', 'de_cbble', '<:de_cbble:632416085899214848>',
-               f'{BASE_URL}cobblestone.jpg')
-split = Map('Dust II', 'de_dust2', '<:de_dust2:632416148658323476>',
-               f'{BASE_URL}dust-ii.jpg')
-ascent = Map('Inferno', 'de_inferno', '<:de_inferno:632416390112084008>',
-                 f'{BASE_URL}inferno.jpg')
+
+bind = Map('Bind', 'bind', '🇧',
+               f'{BASE_URL}bind.png')
+haven = Map('Haven', 'haven', '🇭',
+               f'{BASE_URL}haven.png')
+split = Map('Split', 'split', '🇸',
+               f'{BASE_URL}split.png')
+ascent = Map('Ascent', 'ascent', '🇦',
+                 f'{BASE_URL}ascent.png')
 
 ALL_MAPS = [
     bind,
@@ -134,7 +136,7 @@ class MapDraftCog(commands.Cog):
                     embed_title = f'We\'re going to {map_result.name}! {map_result.emoji}'
                     embed = discord.Embed(title=embed_title, color=self.color)
                     embed.set_image(url=map_result.image_url)
-                    embed.set_footer(text=f'Be sure to select {map_result.name} in the PopFlash lobby')
+                    embed.set_footer(text=f'Be sure to select {map_result.name} in the Valorant lobby')
                     await mdraft_data.message.edit(embed=embed)
                     mdraft_data.maps_left = None
                     mdraft_data.message = None
