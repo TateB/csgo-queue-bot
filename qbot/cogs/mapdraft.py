@@ -15,47 +15,29 @@ class Map:
         self.image_url = image_url
 
 
-BASE_URL = 'https://raw.githubusercontent.com/cameronshinn/csgo-queue-bot/master/assets/maps/images/'
+BASE_URL = 'https://raw.githubusercontent.com/tateb/csgo-queue-bot/master/assets/maps/images/'
 
-de_cache = Map('Cache', 'de_cache', '<:de_cache:632416021910650919>',
+bind = Map('Cache', 'de_cache', '<:de_cache:632416021910650919>',
                f'{BASE_URL}cache.jpg')
-de_cbble = Map('Cobblestone', 'de_cbble', '<:de_cbble:632416085899214848>',
+haven = Map('Cobblestone', 'de_cbble', '<:de_cbble:632416085899214848>',
                f'{BASE_URL}cobblestone.jpg')
-de_dust2 = Map('Dust II', 'de_dust2', '<:de_dust2:632416148658323476>',
+split = Map('Dust II', 'de_dust2', '<:de_dust2:632416148658323476>',
                f'{BASE_URL}dust-ii.jpg')
-de_inferno = Map('Inferno', 'de_inferno', '<:de_inferno:632416390112084008>',
+ascent = Map('Inferno', 'de_inferno', '<:de_inferno:632416390112084008>',
                  f'{BASE_URL}inferno.jpg')
-de_mirage = Map('Mirage', 'de_mirage', '<:de_mirage:632416441551028225>',
-                f'{BASE_URL}mirage.jpg')
-de_nuke = Map('Nuke', 'de_nuke', '<:de_nuke:632416475029962763>',
-              f'{BASE_URL}nuke.jpg')
-de_overpass = Map('Overpass', 'de_overpass', '<:de_overpass:632416513562902529>',
-                  f'{BASE_URL}overpass.jpg')
-de_train = Map('Train', 'de_train', '<:de_train:632416540687335444>',
-               f'{BASE_URL}train.jpg')
-de_vertigo = Map('Vertigo', 'de_vertigo', '<:de_vertigo:632416584870395904>',
-                 f'{BASE_URL}vertigo.jpg')
 
 ALL_MAPS = [
-    de_cache,
-    de_cbble,
-    de_dust2,
-    de_inferno,
-    de_mirage,
-    de_nuke,
-    de_overpass,
-    de_train,
-    de_vertigo
+    bind,
+    haven,
+    split,
+    ascent
 ]
 
 DEFAULT_MAP_POOL = [
-    de_dust2,
-    de_inferno,
-    de_mirage,
-    de_nuke,
-    de_overpass,
-    de_train,
-    de_vertigo
+    bind,
+    haven,
+    split,
+    ascent
 ]
 
 
