@@ -149,7 +149,7 @@ class QueueCog(commands.Cog):
 
     @commands.command(usage='remove <user mention>',
                       brief='Remove the mentioned user from the queue (must have server kick perms)')
-    @commands.has_permissions(kick_members=True)
+    @commands.has_permissions(manage_messages=True)
     async def remove(self, ctx):
         try:
             removee = ctx.message.mentions[0]
@@ -197,7 +197,7 @@ class QueueCog(commands.Cog):
             queue.last_msg = await ctx.send(embed=embed)
 
     @commands.command(brief='Empty the queue (must have server kick perms)')
-    @commands.has_permissions(kick_members=True)
+    @commands.has_permissions(manage_messages=True)
     async def empty(self, ctx):
         """ Reset the guild queue list to empty. """
         queue = self.guild_queues[ctx.guild]
@@ -224,7 +224,7 @@ class QueueCog(commands.Cog):
             await ctx.send(embed=embed)
 
     @commands.command(brief='Set the capacity of the queue (Must have admin perms)')
-    @commands.has_permissions(administrator=True)
+    @commands.has_permissions(manage_messages=True)
     async def cap(self, ctx, new_cap):
         """ Set the queue capacity. """
         try:
