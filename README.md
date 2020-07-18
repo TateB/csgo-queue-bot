@@ -1,11 +1,11 @@
-**DEPRECATED**: DEVELOPMENT CONTINUING [HERE](https://github.com/csgo-league/csgo-league-bot)
+This is a fork from cameronshinn's csgo-queue-bot which can be found [here](https://github.com/cameronshinn/csgo-queue-bot)
 
 <img src="assets/logo/rounded-logo.png" alt="10-Man Queues" align="right" width="50" height="50"/>
 
-# CS:GO Queue Bot &ensp; [![Discord Bots](https://top.gg/api/widget/status/539669626863353868.svg?noavatar=true)](https://top.gg/bot/539669626863353868) [![Discord Bots](https://top.gg/api/widget/servers/539669626863353868.svg?noavatar=true)](https://top.gg/bot/539669626863353868)
-*A Discord bot to manage and setup CS:GO games*
+# Valorant Queue Bot
+*A Discord bot to manage and setup Valorant games*
 
-This script uses the Discord Python API via a bot to manage queues of CS:GO players who want to play with other Discord server members. It is complete with a queueing system, team drafter, map drafter and a link to a unique PopFlash lobby.
+This script uses the Discord Python API via a bot to manage queues of Valorant players who want to play with other Discord server members. It is complete with a queueing system, team drafter, and map drafter.
 
 
 ## Setup
@@ -30,7 +30,7 @@ DISCORD_TOKEN = 'XXXXXXXX'
 qbot.run(discord_token=DISCORD_TOKEN)
 ```
 
-Now you are ready to start using the CS:GO Queue Bot! Try out some of the commands to make sure it works.
+Now you are ready to start using the Valorant Queue Bot! Try out some of the commands to make sure it works.
 
 *Note that currently the `mdraft` command depends on custom emojis to be used as buttons which are hardcoded [here](https://github.com/cameronshinn/csgo-queue-bot/blob/abb06e1876546bb3948094faa795e90184642882/qbot/cogs/mapdraft.py#L20). As of right now you will need to make the emojis yourself and replace the emoji code in the map objects there.*
 
@@ -58,17 +58,3 @@ Now you are ready to start using the CS:GO Queue Bot! Try out some of the comman
 
 `q!setmp {+|-}<map name> ...` **-** Add or remove maps from the mdraft map pool (Must have admin perms)<br>
 
-`q!popflash` **-** Link the server's designated PopFlash lobby<br>
-
-`q!donate` **-** Link the bot's donation link<br>
-
-## Contributions
-
-### Code Style
-This project adheres to the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/) with 120 character line limits.
-
-### Branches
-Create a branch if you're working on an issue with the issue number and name like so: `100_Title-Separated-By-Dashes`.
-
-### Commit Messages
-Phrase commits in the present tense, e.g. `Fix bug` instead of `Fixed bug`.
